@@ -1,0 +1,73 @@
+# File: design3.txt
+# Author: Nana Owusu
+# Date: 12/1/17
+# Section: 29
+# E-mail: onana1@umbc.edu
+# Description:
+# This is the design of a program is a maze solver that takes a file from the 
+# user and constructs a maze based off that information, then finds the 
+# solution path through the maze or decides that there is no solution.
+
+# smallest index of a list
+MINIMUM = 0
+
+# constants that denote the walls of the maze
+RIGHT = 0
+BOTTOM = 1
+LEFT = 2
+TOP = 3
+
+############################################################################
+# readMaze() constructs a 3D list from a file that contains information 
+# 	     about the the maze, such as the length of the rows and columns,
+#	     finishline, and walls  
+# Input:     filename;	 a string of the maze's file name
+# Output:    resultList; a 3D list that serves as the maze
+
+############################################################################
+# finishMaze() aquires the finish points of the maze from a file with the
+# 	       maze information
+# Input:       filename; a string of the maze's file name
+# Output:      userFinish; row and column postion of the finish
+
+############################################################################
+# searchMaze() prints out a solution plan, if one is found using recursion 
+# 	       from a 3D list maze, the user's starting point, and the
+#	       finish point of the maze
+# Input:       maze; 3D list of maze construct
+# 	       userStart; row and column starting point of the maze
+#	       userFinish; row and column finish point of the maze
+# Output:      none   
+
+############################################################################
+# getValidInput() gets a valid integer from the user that falls in the
+#  		  range of the list row or column; uses a prompt provided 
+#		  in function call
+# Input:	  prompt; a string tot use when asking for input
+# 		  minimum; a minimum integer of row or column
+# 		  maximum; a maximum integer of row or column
+#		  maze; 3D list of maze construct
+# Output: 	  userInput; an integer within the range 
+
+def main():
+
+    # create prompt for entering file name
+    # get the filename from the user
+    # read in the maze data
+    # construct the maze
+    maze = readMaze()
+
+    # create prompt for getting starting row
+    # get the starting row from the user
+    getValidInput()
+    # create prompt for getting starting column
+    # get the starting column from the user
+    getValidInput()
+
+    # use the users inputs to find a solution to the maze to the finish line
+    # gives no solution if solution can't be found
+    searchMaze()
+
+main()
+
+	

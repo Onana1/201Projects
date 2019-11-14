@@ -1,0 +1,110 @@
+# File: design2.txt
+# Author: Nana Owusu
+# Date: 11/3/2017
+# Section: 29
+# E-mail: onana1@umbc.edu
+# Description:
+# This is the design of Conway's game of life which is a program where the 
+# user selects the number of rows and columns, then selects where the cell
+# should turn on and how many iterations of the game should run.  
+
+# character for qutting the game
+GAME_QUIT = "q"
+
+# characters used in list(GameBoard)
+PIXEL_DEAD = "."
+PIXEL_ALIVE = "A"
+
+# minimum values for creating rows and columns
+ROW_MIN = 1
+COL_MIN = 1
+
+# minimum value for creating iterations 
+ITER_MIN = 0
+
+############################################################################
+# getValidInput() gets a valid integer from the user that is above an 
+# 		  appropriate minimum, uses a prompt provided at function
+#		  call 
+# Input:	  prompt; a string that is used to ask for input
+# 		  minimum; minimum integer
+# Output:	  userInput; an integer above the minimum 
+
+
+############################################################################
+# getValidInputBoard() gets a valid integer from the user that is above the
+#                      first index of a 2D list, and below the maximum index
+#		       of the list, uses a prompt provided at function call
+# Input:               prompt; a string that is used to ask for input
+#                      userBoard; 2D list
+#		       minimum; minimum integer
+#		       maximum; maximum integer
+# Output:              userInput; an integer in the appropriate range
+
+
+############################################################################
+# nextIteration() gets the current condition of the game board and returns 
+# 		  the next iteration of it
+# Input:	  userBoard; 2D list of current dead and alive pixels	  
+# Output:	  newBoard;  2D list of new dead and alive pixels
+
+
+############################################################################
+# printBoard()	prints out the contents of the board
+# Input:	userBoard; 2D list of dead and alive pixels
+# Output	none 
+
+
+############################################################################
+# pixelAliveOn() modifies a 2D list by changing dead pixels to alive using 
+# 		 user input of the specfic row and column area
+# Input:	 userBoard; 2D list of dead and alive pixels
+#  		 userRow; index of row 
+# 		 userColumn; index of column
+# Output:	 startBoard; 2D list where element of row/column specifed
+# 		 is modified  
+
+
+############################################################################
+# createBoard() creates a 2D list of dead pixels using specified amount of
+# 		rows and columns
+# Input:	userRows; length of rows
+# 		userColumns; length of columns
+# Output:	gameBoard; 2D list of all starting dead pixels with 
+# 		appropriate amount of rows and columns
+
+
+def main():
+
+    # create prompt for number of rows choice
+    getValidInput()
+    # create prompt for number of column choice
+    getValidInput()
+    # create board using row and column choice
+    createBoard()
+    # create prompt for row cell to turn on
+    getValidInputBoard()
+
+    # while row cell != q (for QUIT)
+      
+      # create prompt for column for cell
+      getValidInputBoard()
+      # Turn pixel on in that row/column
+      pixelAliveOn()
+      # get more areas for row cell to turn on or QUIT
+      getValidInputBoard()
+
+    # create input for how many iterations should be ran
+    # print out starting board
+    printBoard()
+    # create count variable for iterations
+    
+    # while count variable < iterations wanted      
+      
+      # get next iteration changing current board 
+      nextIteration()
+      # add to count
+      # print new interation of the game board
+      printBoard()
+
+main()

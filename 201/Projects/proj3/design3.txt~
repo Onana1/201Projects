@@ -1,0 +1,25 @@
+# File: design3.txt
+# Author: Nana Owusu
+# Date: 12/1/17
+# Section: 29
+# E-mail: onana1@umbc.edu
+# Description:
+# DESCRIPTION OF WHAT THE PROGRAM DOES
+
+# constants that denote the walls of the maze
+RIGHT = 0
+BOTTOM = 1
+LEFT = 2
+TOP = 3
+
+############################################################################
+# readMaze()
+
+############################################################################
+# searchMaze()
+
+############################################################################
+# pathMaze
+
+############################################################################
+# getValidInput()

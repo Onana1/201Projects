@@ -1,0 +1,2 @@
+Laika,unknown,female,3,50
+Goddard,robot,male,4,61

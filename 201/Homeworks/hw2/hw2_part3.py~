@@ -1,0 +1,37 @@
+# File: hw2_part3.py
+# Author: Nana Owusu
+# Date: 9/22/2017
+# Section: 29
+# E-mail: onana1@umbc.edu
+# Description: This prorgam simulates a deli order and ask the user for their 
+# type of sandwich, side, and drink, and informs them of the order.
+
+def main():
+
+    print("Welcome to the CMSC 201 deli")
+
+    print("Pick 'ham', 'cheese', or 'veggie' for your sandwich")
+    choiceSand = input("Choose a sandwich:")
+    
+    print("Pick 'cookies', 'chips', or pickle for your side")
+    choiceSide = input("Choose a side:")
+
+    print("Pick 'water', lemonade', or 'soda' for your drink")
+    choiceDrink = input("Choose a drink:")
+
+    if choiceSand == "ham" or choiceSand == "cheese" or choiceSand == "veggie":
+        print("You chose a" ,choiceSand, "sandwich.")
+    else:
+        print("A" ,choiceSand, "is not a prper choice for a sandwich.")
+    if choiceSide == "cookies" or "chips" or "pickle":
+        print("You chose a" , choiceSide, "for your side.")
+    else:
+        print("A" ,choiceSide, "is not a prper choice for a side.")
+    if choiceDrink == "water" or "lemonade" or "soda":
+        print("You chose a" ,choiceDrink, "for your drink.")
+    else:
+        print("A" ,choiceDrink, "is not a prper choice for a drink.")
+
+    print("Enjoy you meal")
+
+main()
